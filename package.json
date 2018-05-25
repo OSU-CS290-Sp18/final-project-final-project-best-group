@@ -1,0 +1,24 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "description": "final project for cs290",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crollt/final_project.git"
+  },
+  "author": "thomas croll, jackson bizjak, ben warchauer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crollt/final_project/issues"
+  },
+  "homepage": "https://github.com/Crollt/final_project#readme",
+  "dependencies": {
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11"
+  }
+}
