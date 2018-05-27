@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Crollt/final_project#readme",
   "dependencies": {
+    "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11"
   }

@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 5px;
+    display: inline-block;
+}
+
+hr {
+    margin-top: auto;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+textarea {
+    resize: none;
+}
+
+div {
+    border: 1px solid black;
+}
+
+.sheet-container {
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin-top: 10px;
+}
+
+.char-sheet {
+    width: 80%;
+    display: flex;
+    border: none;
+    flex-wrap: wrap;
+}
+
+.char-header {
+    width: 100%;
+    display:flex;
+    border: none;
+}
+
+.char-name {
+    font-size: 30px;
+    font-weight: bold;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.desc {
+    text-align: center;
+    font-size: 10px;
+    color: gray;
+    /* margin-top: auto; */
+}
+
+.char-info {
+    flex-grow: 3;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.char-class, .char-level, .char-background, .char-race, .char-alignment, .char-exp {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 33%;
+    border: none;
+}
+
+.char-content {
+    display: flex;
+    width: 100%;
+}
+
+.char-stats-money, .char-hp-equipment, .char-traits-prof-feats {
+    flex-grow: 1;
+    flex-basis: 33%; 
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    background-color: gray;
+}

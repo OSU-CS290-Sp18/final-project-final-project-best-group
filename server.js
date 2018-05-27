@@ -10,6 +10,10 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+app.get('/', function (req, res) {
+    res.status(200).sendFile("public/index.html");
+});
+
 app.get('*', function (req, res) {
     res.status(404).send("Doesn't exist");
 });
