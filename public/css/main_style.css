@@ -21,11 +21,6 @@ hr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-
-textarea {
-    resize: none;
-}
-
 div {
     border: 1px solid black;
 }
@@ -54,10 +49,12 @@ div {
 .char-name {
     font-size: 30px;
     font-weight: bold;
-    flex-grow: 1;
+    flex-basis: 33.3%;
     display: flex;
     flex-direction: column;
     text-align: center;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
 }
 
 .char-name-name {
@@ -70,20 +67,20 @@ div {
     color: gray;
     margin: 0;
     font-weight: normal;
-    /* margin-top: auto; */
 }
 
 .char-info {
-    flex-grow: 3;
+    flex-basis: 66.8%;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
 }
 
 .char-class, .char-level, .char-background, .char-race, .char-alignment, .char-exp {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     flex-basis: 33%;
     border: none;
 }
@@ -94,8 +91,7 @@ div {
 }
 
 .char-stats-money, .char-hp-equipment, .char-traits-prof-feats {
-    flex-grow: 1;
-    flex-basis: 33%; 
+    flex-basis: 33.3%; 
     display: flex;
     flex-direction: column;
     background-color: #cccccc;
@@ -106,7 +102,7 @@ div {
 }
 
 .char-str, .char-dex, .char-con, .char-int, .char-wis, .char-cha {
-    background-color: white;
+    background-color: #cccccc;
     display: flex;
     flex-direction: row;
     margin-left: 20px;
@@ -117,6 +113,7 @@ div {
 }
 
 .char-stat-nums {
+    background-color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -133,7 +130,7 @@ div {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    width: 75px;
+    width: 80px;
     height: 60px;
     font-weight: bold;
     border: 2px solid black;
@@ -152,6 +149,7 @@ div {
     display: flex;
     flex-direction: column;
     background-color: #cccccc;
+    margin-top: 10px;
     font-size: 12px;
 }
 
@@ -166,30 +164,28 @@ div {
 }
 
 .char-stat-misc {
-    margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
-    border: none;
-    text-align: center;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
-}
-
-.char-prof-bonus {
-    background-color:black;
+    border: none;
+    text-align: center;
 }
 
 .char-stat-misc-label {
-    flex-basis: 80%;
+    flex-grow: 1;
     border: 2px solid black;
-    padding: 10px;
     background-color: white;
+    padding: 10px;
 }
 
 .char-prof-bonus {
-    flex-basis: 20%;
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80px;
     border: 2px solid black;
     border-right: none;
-    padding: 10px;
     background-color: white;
 }
