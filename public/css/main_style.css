@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -30,23 +30,95 @@ div {
     border: 1px solid black;
 }
 
+.title-bar {
+	display: flex;
+	justify-content: center;
+	background-color: #FF6347;
+	font-size: 30px;
+	border: none;
+	height: 50px;
+}
+
+.new-char {
+	width: 100%;
+	display: flex; 
+	justify-content: center; 
+	border-style: groove solid; 
+}
+#newCharButton {
+	font-size: 30px;
+	border: none;
+	background-color: grey;
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+.desc-container {
+	display: flex; 
+	width: 100%;
+	flex-direction: column;
+}
+.desc-header {
+	display: flex;
+	width: 100%;
+	flex-direction: row; 
+	font-size: 20px;
+}
+.header-name {
+	flex-basis: 33%;
+}
+	
+.header-lvl {
+	flex-basis: 7%; 
+}
+
+.header-class, .header-race {
+	flex-basis: 24%;
+}
+.header-edit {
+	flex-basis: 12%; 
+}
+
+
+.char-desc {
+	display: flex;
+	width: 100%; 
+	flex-direction: row;
+	font-size: 16px;
+}
+
+
+.list-name {
+	flex-basis: 33%;	
+}
+.list-lvl  {
+	flex-basis: 7%;
+}
+.list-class, .list-race {
+	flex-basis: 24%;
+}
+.list-edit {
+	flex-basis: 12%;
+}
+
+
+
 .sheet-container {
     display: flex;
     justify-content: center;
     border: none;
-    margin-top: 10px;
-    margin-bottom: 50px;
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 
 .char-sheet {
-    width: 60%;
+    width: 50%;
     display: flex;
     border: none;
     flex-wrap: wrap;
 }
 
 .char-header {
-    width: 100%;
+   	background-color: white;
+   	width: 100%;
     display:flex;
     border: none;
 }
@@ -67,7 +139,7 @@ div {
 .desc {
     text-align: center;
     font-size: 10px;
-    color: gray;
+    color: grey;
     margin: 0;
     font-weight: normal;
     /* margin-top: auto; */
