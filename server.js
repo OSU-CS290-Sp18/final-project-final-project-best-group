@@ -39,6 +39,14 @@ app.get('/list', function(req, res, next) {
         }
     });
 });
+
+
+app.get('/edit', function(req, res, next) {
+    res.status(200).render('edit_sheet', {
+        characters: [1]
+    });
+});
+
 app.get('/chars/:charName/:charRace', function (req, res, next) {
     var chars = db.collection('chars');
     var charCursor = chars.find({
@@ -98,7 +106,7 @@ MongoClient.connect(mongoURL, function (err, client) {
 		throw err;
 	
 	db = mongoDBDatabase = client.db(mongoDBName);
-	app.listen(3000, function () {
-		console.log("== Server listening on port 3000");
+	app.listen(port, function () {
+		console.log(`== Server listening on port ${port}`);
 	});
 });
