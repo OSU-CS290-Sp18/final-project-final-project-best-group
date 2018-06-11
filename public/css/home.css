@@ -1,0 +1,58 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page-not-found{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 60px;
+}
+.title-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #FF6347;
+	font-size: 30px;
+	height: 65px;
+	border: none;
+}
+.dnd-img {
+	flex-basis: 3%;
+	width: 65px;
+	height: 65px;
+	margin-left: none;
+}
+.about-head {
+    position: absolute;
+    width: 35%;
+    left: 200px;
+    top: 250px;
+    font-size: 30px;
+    border: none;
+}
+
+.about-body {
+    width: 35%;
+    position: absolute;
+    left: 200px;
+    top: 330px;
+    font-size: 20px;
+    border: none;
+}
+
+.dragon-image{
+
+        position: absolute;
+        right: 100px;
+        top: 150px;
+        font-size: 30px;
+        border: none;
+        height:50%;
+        width: 30%
+}
