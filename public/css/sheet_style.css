@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 5px;
+    display: inline-block;
+}
+
+hr {
+    margin-top: auto;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+div {
+    border: 1px solid black;
+}
+
+.sheet-container {
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.char-sheet {
+    width: 60%;
+    display: flex;
+    border: none;
+    flex-wrap: wrap;
+}
+
+.char-header {
+    width: 100%;
+    display:flex;
+    border: none;
+}
+
+.char-name {
+    font-size: 30px;
+    font-weight: bold;
+    flex-basis: 33.3%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    min-width: 300;
+}
+
+.char-name-name {
+    margin-top: 20px;
+}
+
+.desc {
+    text-align: center;
+    font-size: 10px;
+    color: gray;
+    margin: 0;
+    font-weight: normal;
+}
+
+.char-info {
+    flex-basis: 66.8%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    min-width: 690;
+}
+
+.char-class, .char-level, .char-background, .char-race, .char-alignment, .char-exp {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    border: none;
+}
+
+.char-content {
+    display: flex;
+    width: 100%;
+    min-width: 994;
+}
+
+.char-stats-money, .char-hp-equipment, .char-traits-prof-feats {
+    flex-basis: 33.3%; 
+    display: flex;
+    flex-direction: column;
+    background-color: #cccccc;
+}
+
+.char-stats {
+    min-width: 300px;
+    border:none;
+}
+
+.char-str, .char-dex, .char-con, .char-int, .char-wis, .char-cha {
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: none;
+    border-top: 2px solid black;
+    margin-top: 10px;
+}
+
+.char-stat-nums {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: none;
+}
+
+.char-stat-raw {
+    padding: 10px;
+    border: 2px solid black;
+    border-top: none;
+}
+
+.char-stat-mod {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 60px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-top: none;
+}
+
+.char-stat-name {
+    font-size: 9px;
+    margin-top: auto;
+    font-weight: normal;
+}
+
+.char-stat-profs {
+    flex-grow: 1;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #cccccc;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.char-stat-profs p {
+    padding: 0;
+    margin-left: 20px;
+}
+
+.fa-circle, .fa-square {
+    font-size: 10px;
+    transform: rotate(45deg);
+}
+
+.char-stat-misc {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    text-align: center;
+}
+
+.char-stat-misc-label {
+    flex-grow: 1;
+    border: 2px solid black;
+    background-color: white;
+    padding: 10px;
+}
+
+.char-prof-bonus {
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80px;
+    border: 2px solid black;
+    border-right: none;
+    background-color: white;
+}
+
+.char-hp, .char-equipment, .char-traits, .char-feats {
+    flex-grow: 1;
+    min-width: 300;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.char-equipment, .char-feats {
+    margin-bottom: 10px;
+}
+
+.char-hp {
+    flex-grow: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.char-ac {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    flex-basis: 100%;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.char-initiative, .char-hitpoints, .char-speed {
+    margin-left: 5px;
+    border: 2px solid black;
+    flex-basis: 29.7%;    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.char-speed {
+    margin-right: 5px;
+}
