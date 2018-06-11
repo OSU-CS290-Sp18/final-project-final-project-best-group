@@ -5,7 +5,7 @@ for(var k = 0; k < descs[0].length; k++){
     alldescs.push(descs[0].getElementsByClassName('desc-container')[k].cloneNode([true]));
 }
 
-function remove() {
+function search() {
     var newdescs = [];
 
     descs[0].innerHTML = "";
