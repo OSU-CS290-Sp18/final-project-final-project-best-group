@@ -9,8 +9,6 @@ body {
 
 .page-not-found{
     display: flex;
-	flex-direction: row;
-	justify-content: center;
     justify-content: center;
     margin-top: 30px;
     font-size: 60px;
@@ -32,9 +30,15 @@ body {
 }
 .meme{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+
     justify-content: center;
     margin-top: 30px;
     font-size: 60px;
+}
+
+.suggestion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 30px;
 }
