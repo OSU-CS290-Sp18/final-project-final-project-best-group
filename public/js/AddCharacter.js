@@ -92,7 +92,7 @@ function fillData(){
     document.getElementById('background-text').innerText = oldstats.background;
     document.getElementById('race-text').innerText = oldstats.race;
     document.getElementById('alignment-text').innerText = oldstats.alignment;
-    document.getElementById('exp-text').innerText = oldstats.exp;
+    document.getElementById('experience-text').innerText = oldstats.exp;
 
     document.getElementById('ac-text').innerText = oldstats.ac;
     document.getElementById('initiative-text').innerText = oldstats.initiative;
@@ -202,7 +202,7 @@ function checkData(){
         alert("Character sheet must have name and race");
         n = false;
     }
-    
+
     if(n)
         sendData();
 }
