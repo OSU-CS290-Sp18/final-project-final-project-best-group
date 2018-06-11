@@ -24,11 +24,27 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-app.get('/', function (req, res) {
-    res.status(200).render("char_sheet", {
-        strength: 10,
-        strengthmod: 2 
+app.get('/chars/:charName/:charRace', function (req, res, next) {
+    var chars = db.collection('chars');
+    var charCursor = chars.find({
+        name: req.params.charName,
+        race: req.params.charRace 
     });
+});
+
+app.post('/name/:charName/:charRace/submit', function (req, res, next) {
+    var chars = db.collection('chars');
+    chars.updateOne(
+        { name: req.params.charName },
+        { race: req.params.charRace },
+        function (err, result) {
+            if (err) {
+                res.status(500).send("Error inserting char in DB");
+            } else {
+                res.status(200).redirect(`/chars/${req.params.charName}/${req.params.charRace}`);
+            }
+        } 
+    );
 });
 
 app.get('*', function (req, res) {
