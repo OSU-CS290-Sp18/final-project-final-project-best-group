@@ -23,8 +23,12 @@ console.log(mongoURL);
 app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
+
 app.get('/', function (req, res) {
-    res.status(200).sendFile("public/index.html");
+    res.status(200).render("char_sheet", {
+        strength: 10,
+        strengthmod: 2 
+    });
 });
 
 app.get('*', function (req, res) {

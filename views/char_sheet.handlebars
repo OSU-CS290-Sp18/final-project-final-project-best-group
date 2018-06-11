@@ -1,0 +1,287 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/sheet_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" defer></script>
+    </head>
+    <body> 
+        <div class="sheet-container">
+            <div class="char-sheet">
+                <div class="char-header">
+                    <div class="char-name">
+                        <p class="char-name-name">{{name}}</p>
+                        <hr>
+                        <p class="desc">Character Name</p>
+                    </div>
+                    <div class="char-info">
+                        <div class="char-class">
+                            <p>{{class}}</p>
+                            <hr>
+                            <p class="desc">Class</p>
+                        </div>
+                        <div class="char-level">
+                            <p>{{level}}</p>
+                            <hr>
+                            <p class="desc">Level</p>
+                        </div>
+                        <div class="char-background">
+                            <p>{{background}}</p>
+                            <hr>
+                            <p class="desc">Background</p>
+                        </div>
+                        <div class="char-race">
+                            <p>{{race}}</p>
+                            <hr>
+                            <p class="desc">Race</p>
+                        </div>
+                        <div class="char-alignment">
+                            <p>{{alignment}}</p>
+                            <hr>
+                            <p class="desc">Alignment</p>
+                        </div>
+                        <div class="char-exp">
+                            <p>{{exp}}</p>
+                            <hr>
+                            <p class="desc">Experience Points</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="char-content">
+                    <div class="char-stats-money">
+                        <div class="char-stats">
+                            <div class="char-str">
+                                <div class="char-stat-nums">
+                                    <p class="char-stat-raw">{{strength}}</p>
+                                    <div class="char-stat-mod">
+                                        <p>{{strengthmod}}</p>
+                                        <p class="char-stat-name">STRENGTH</p>
+                                    </div>
+                                </div>
+                                <div class="char-stat-profs">
+                                    {{#if strengthsave}}
+                                        <p><i class="fas fa-square"></i> &mdash; Saving Throw</p>
+                                    {{else}}
+                                        <p><i class="far fa-square"></i> &mdash; Saving Throw</p>
+                                    {{/if}}
+                                    {{#if athletics}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Athletics</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Athletics</p>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            <div class="char-dex">
+                                <div class="char-stat-nums">
+                                    <p class="char-stat-raw">{{dexterity}}</p>
+                                    <div class="char-stat-mod">
+                                        <p>{{dexteritymod}}</p>
+                                        <p class="char-stat-name">DEXTERITY</p>
+                                    </div>
+                                </div>
+                                <div class="char-stat-profs">
+                                    {{#if dexsave}}
+                                        <p><i class="fas fa-square"></i> &mdash; Saving Throw</p>
+                                    {{else}}
+                                        <p><i class="far fa-square"></i> &mdash; Saving Throw</p>
+                                    {{/if}}
+                                    {{#if acrobatics}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Acrobatics</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Acrobatics</p>
+                                    {{/if}}
+                                    {{#if sleight}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Sleight of Hand</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Sleight of Hand</p>
+                                    {{/if}}
+                                    {{#if stealth}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Stealth</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Stealth</p>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            <div class="char-con">
+                                <div class="char-stat-nums">
+                                    <p class="char-stat-raw">{{constitution}}</p>
+                                    <div class="char-stat-mod">
+                                        <p>{{conmod}}</p>
+                                        <p class="char-stat-name">CONSTITUTION</p>
+                                    </div>
+                                </div>
+                                <div class="char-stat-profs">
+                                    {{#if consave}}
+                                        <p><i class="fas fa-square"></i> &mdash; Saving Throw</p>
+                                    {{else}}
+                                        <p><i class="far fa-square"></i> &mdash; Saving Throw</p>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            <div class="char-int">
+                                <div class="char-stat-nums">
+                                    <p class="char-stat-raw">{{intelligence}}</p>
+                                    <div class="char-stat-mod">
+                                        <p>{{intmod}}</p>
+                                        <p class="char-stat-name">INTELLIGENCE</p>
+                                    </div>
+                                </div>
+                                <div class="char-stat-profs">
+                                    {{#if intsave}}
+                                        <p><i class="fas fa-square"></i> &mdash; Saving Throw</p>
+                                    {{else}}
+                                        <p><i class="far fa-square"></i> &mdash; Saving Throw</p>
+                                    {{/if}}
+                                    {{#if arcana}} 
+                                        <p><i class="fas fa-circle"></i> &mdash; Arcana</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Arcana</p>
+                                    {{/if}}
+                                    {{#if history}}
+                                        <p><i class="fas fa-circle"></i> &mdash; History</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; History</p>
+                                    {{/if}}
+                                    {{#if investigation}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Investigation</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Investigation</p>
+                                    {{/if}}
+                                    {{#if nature}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Nature</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Nature</p>
+                                    {{/if}}
+                                    {{#if religion}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Religion</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Religion</p>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            <div class="char-wis">
+                                <div class="char-stat-nums">
+                                    <p class="char-stat-raw">{{wisdom}}</p>
+                                    <div class="char-stat-mod">
+                                        <p>{{wisdommod}}</p>
+                                        <p class="char-stat-name">WISDOM</p>
+                                    </div>
+                                </div>
+                                <div class="char-stat-profs">
+                                    {{#if wisdomsave}}
+                                        <p><i class="fas fa-square"></i> &mdash; Saving Throw</p>
+                                    {{else}}
+                                        <p><i class="far fa-square"></i> &mdash; Saving Throw</p>
+                                    {{/if}}
+                                    {{#if animal}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Animal Handling</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Animal Handling</p>
+                                    {{/if}}
+                                    {{#if insight}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Insight</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Insight</p>
+                                    {{/if}}
+                                    {{#if medicine}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Medicine</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Medicine</p>
+                                    {{/if}}
+                                    {{#if perception}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Perception</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Perception</p>
+                                    {{/if}}
+                                    {{#if survival}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Survival</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Survival</p>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            <div class="char-cha">
+                                <div class="char-stat-nums">
+                                    <p class="char-stat-raw">{{charisma}}</p>
+                                    <div class="char-stat-mod">
+                                        <p>{{charismamod}}</p>
+                                        <p class="char-stat-name">CHARISMA</p>
+                                    </div>
+                                </div>
+                                <div class="char-stat-profs">
+                                    {{#if charismasave}}
+                                        <p><i class="fas fa-square"></i> &mdash; Saving Throw</p>
+                                    {{else}}
+                                        <p><i class="far fa-square"></i> &mdash; Saving Throw</p>
+                                    {{/if}}
+                                    {{#if deception}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Deception</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Deception</p>
+                                    {{/if}}
+                                    {{#if intimidation}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Intimidation</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Intimidation</p>
+                                    {{/if}}
+                                    {{#if performance}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Performance</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Performance</p>
+                                    {{/if}}
+                                    {{#if pursuasion}}
+                                        <p><i class="fas fa-circle"></i> &mdash; Pursuasion</p>
+                                    {{else}}
+                                        <p><i class="far fa-circle"></i> &mdash; Pursuasion</p>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            <div class="char-stat-misc">
+                                <p class="char-prof-bonus">{{pbonus}}</p><p class="char-stat-misc-label">Proficiency Bonus</p>
+                            </div>
+                            <div class="char-stat-misc" style="padding-bottom: 10px;">
+                                <p class="char-prof-bonus">{{pp}}</p><p class="char-stat-misc-label">Passive Perception</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="char-hp-equipment">
+                        <div class="char-hp">
+                            <div class="char-ac">
+                                <p>{{ac}}</p>
+                                <p class="char-stat-name">AC</p>
+                            </div>
+                            <div class="char-initiative">
+                                <p>{{initiative}}</p>
+                                <p class="char-stat-name">Initiative</p>
+                            </div>
+                            <div class="char-hitpoints">
+                                <p>{{hp}}</p>
+                                <p class="char-stat-name">HP</p>
+                            </div>
+                            <div class="char-speed">
+                                <p>{{speed}}</p>
+                                <p class="char-stat-name">Speed</p>
+                            </div>
+                        </div>
+                        <div class="char-equipment">
+                            <p>{{equipment}}</p>
+                            <hr>
+                            <p class="desc">Equipment</p>
+                        </div>
+                    </div>
+                    <div class="char-traits-prof-feats">
+                        <div class="char-traits">
+                            <p>{{proficiencies}}</p>
+                            <hr>
+                            <p class="desc">Proficiencies & Languages</p>
+                        </div>
+                        <div class="char-feats">
+                            <p>{{feats}}</p>
+                            <hr>
+                            <p class="desc">Features & Traits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
