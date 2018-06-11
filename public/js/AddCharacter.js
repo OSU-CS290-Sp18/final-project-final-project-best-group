@@ -1,7 +1,12 @@
 var request = new XMLHttpRequest();
 
+window.onbeforeunload = function() {
+      return "Data will be lost if you leave the page, are you sure?";
+};
+
 request.addEventListener('load', function(event) {
     if (event.target.status == 200){
+        window.onbeforeunload = null;
         window.location.replace(`/chars/${document.getElementById('name-text').value}/${document.getElementById('race-text').value}`);
     }
 });
@@ -157,22 +162,22 @@ function checkData() {
             proficiencies: document.getElementById('proficiencies-text').value,
             feats: document.getElementById('feats-text').value,
 
-            strength: parseint(document.getElementById('strength-text').value),
+            strength: parseInt(document.getElementById('strength-text').value),
             strengthmod: Math.floor((parseInt(document.getElementById('strength-text').value)-10)/2),
 
-            dexterity: parseint(document.getElementById('dexterity-text').value),
+            dexterity: parseInt(document.getElementById('dexterity-text').value),
             dexmod: Math.floor((parseInt(document.getElementById('dexterity-text').value)-10)/2),
 
-            constitution: parseint(document.getElementById('constitution-text').value),
+            constitution: parseInt(document.getElementById('constitution-text').value),
             conmod: Math.floor((parseInt(document.getElementById('strength-text').value)-10)/2),
 
-            intelligence: parseint(document.getElementById('intelligence-text').value),
+            intelligence: parseInt(document.getElementById('intelligence-text').value),
             intmod: Math.floor((parseInt(document.getElementById('strength-text').value)-10)/2),
 
-            wisdom: parseint(document.getElementById('wisdom-text').value),
+            wisdom: parseInt(document.getElementById('wisdom-text').value),
             wisdommod: Math.floor((parseInt(document.getElementById('strength-text').value)-10)/2),
 
-            charisma: parseint(document.getElementById('charisma-text').value),
+            charisma: parseInt(document.getElementById('charisma-text').value),
             charismamod: Math.floor((parseInt(document.getElementById('strength-text').value)-10)/2),
 
             strengthsave: document.getElementById('strength-save').checked,
