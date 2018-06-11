@@ -26,6 +26,19 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+app.get('/list', function(req, res, next) {
+    var chars = db.collection('chars');
+    var charList = chars.find({});
+    charList.toArray(function (err, charDocs) {
+        if (err)
+            res.status(500).send("Error fetching people from DB.");
+        else {
+            res.status(200).render('char_list', {
+                characters: charDocs
+            });
+        }
+    });
+});
 app.get('/chars/:charName/:charRace', function (req, res, next) {
     var chars = db.collection('chars');
     var charCursor = chars.find({

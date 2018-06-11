@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/main_style.css">
@@ -35,26 +36,9 @@
                   </div>
               </div>
               <div class = "char-container">
-                  <div class="char-desc">
-                      <div class="list-name">
-                          <p>Name</p>
-                      </div>
-                      <div class="list-lvl">
-                        <p>Level</p>
-                      </div>
-                      <div class="list-class">
-                          <p>Class</p>
-                      </div>
-                      <div class="list-race">
-                          <p>Race</p>
-                      </div>
-    				          <div class="list-view">
-    				  		        <a href="insert url">View</a>
-    				          </div>
-                      <div class="list-edit">
-                      		<a href="insert url">Edit</a>
-    				          </div>
-                  </div>
+                  {{#each characters}}
+                    {{> list_char}}
+                  {{/each}} 
              </div>
              </div>
           </div>
