@@ -58,44 +58,34 @@ app.get('/chars/:charName/:charRace', function (req, res, next) {
     });
 });
 
-app.post('/name/:charName/:charRace/submit', function (req, res, next) {
+app.get('/chars/:charName/:charRace/edit', function (req, res, next) {
     var chars = db.collection('chars');
     var charCursor = chars.find({
         name: req.params.charName,
         race: req.params.charRace 
     });
-    // chars.insertOne(req.body, function (err, result) {
-    //     if (err) {
-    //         res.status(500).send("Error inserting char in DB");
-    //     } else {
-    //         res.status(200).send("Success");
-    //     } 
-    // });
     charCursor.next(function (err, charDoc) {
         if (err)
             res.status(500).send("Error retrieving single char");
-        else if (!charDoc) {
-            chars.insertOne(req.body, function (err, result) {
-                if (err) {
-                    res.status(500).send("Error inserting char in DB");
-                } else {
-                    res.status(200).send("Success");
-                } 
-            });
-        }
+        else if (!charDoc)
+            next();
         else { 
-            chars.updateOne(
-                { charDoc },
-                { $push: req.body },
-                function (err, result) {
-                    if (err) {
-                        res.status(500).send("Error inserting char in DB");
-                    } else {
-                        res.status(200).send("Success");
-                    } 
-                }
-            );
+            res.status(200).render('edit_sheet', {
+                characters: [charDoc]
+            });
+            chars.remove(charDoc);
         }
+    });
+});
+
+app.post('/name/:charName/:charRace/submit', function (req, res, next) {
+    var chars = db.collection('chars');
+    chars.insertOne(req.body, function (err, result) {
+        if (err) {
+            res.status(500).send("Error inserting char in DB");
+        } else {
+            res.status(200).send("Success");
+        } 
     });
 });
 

@@ -1,0 +1,155 @@
+<!doctype html>
+<div class="edit-sheet">
+    <div class="edit-header">
+          <div class="edit-desc">
+              <p class="desc-name">Name</p> 
+              <input type="text" class="input" id="name-text" value="{{name}}">
+          </div>
+          <div class="edit-desc">
+              <p class="desc-name">Class</p> 
+              <input type="text" class="input" id="class-text" value="{{class}}">
+          </div>
+          <div class="edit-desc">
+              <p class="desc-name">Level</p> 
+              <input type="text" class="input" id="level-text" value="{{level}}">
+          </div>
+          <div class="edit-desc">
+              <p class="desc-name">Background</p> 
+              <input type="text" class="input" id="background-text" value="{{background}}">
+          </div>
+          <div class="edit-desc">
+              <p class="desc-name">Race</p> 
+              <input type="text" class="input" id="race-text" value="{{race}}">
+          </div>
+          <div class="edit-desc">
+              <p class="desc-name">Alignment</p> 
+              <input type="text" class="input" id="alignment-text" value="{{alignment}}">
+          </div>
+          <div class="button-container"> 
+              <a href="insert url" id="delete-button">Delete</a>
+          </div>
+          <div class="edit-desc">
+              <p class="desc-name">Experience</p> 
+              <input type="text" class="input" id="experience-text" value="{{exp}}">
+          </div>
+          <div class="button-container">
+              <a id="save-button">Save</a>
+          </div>
+    </div>
+    <div class="edit-content">
+          <div class="edit-attribute">
+              <div class="edit-value"> 
+                  <p class="desc-name">Strength</p> 
+                  <input type="text" class="input" id="strength-text" value="{{strength}}">
+              </div>
+              <div class="edit-proficiency">
+                  <p>Saving Throw <input type="checkbox" id="strength-save" {{#if strengthsave}}checked{{/if}}></p>
+                  <p>Athletics <input type="checkbox" id="athletics"{{#if athletics}}checked{{/if}}></p>
+              </div>
+          </div>
+          <div class="edit-attribute">
+              <div class="edit-value"> 
+                  <p class="desc-name">Dexterity</p> 
+                  <input type="text" class="input" id="dexterity-text" value="{{dexterity}}">
+              </div>
+              <div class="edit-proficiency">
+                  <p>Saving Throw <input type="checkbox" id="dexterity-save"{{#if dexsave}}checked{{/if}}></p>
+                  <p>Acrobatics <input type="checkbox" id="acrobatics"{{#if acrobatics}}checked{{/if}}></p>
+                  <p>Sleight of Hand <input type="checkbox" id="sleight-of-hand"{{#if sleight}}checked{{/if}}></p>
+                  <p>Stealth <input type="checkbox" id="stealth"{{#if stealth}}checked{{/if}}></p>
+              </div>
+          </div>
+          <div class="edit-attribute">
+              <div class="edit-value"> 
+                  <p class="desc-name">Constitution</p> 
+                  <input type="text" class="input" id="constitution-text" value="{{constitution}}">
+              </div>
+              <div class="edit-proficiency">
+                  <p>Saving Throw <input type="checkbox" id="constitution-save"{{#if consave}}checked{{/if}}></p>
+              </div>
+          </div>
+          <div class="edit-attribute">
+              <div class="edit-value"> 
+                  <p class="desc-name">Intelligence</p> 
+                  <input type="text" class="input" id="intelligence-text" value="{{intelligence}}">
+              </div>
+              <div class="edit-proficiency">
+                  <p>Saving Throw <input type="checkbox" id="intelligence-save"{{#if intsave}}checked{{/if}}></p>
+                  <p>Arcana <input type="checkbox" id="arcana"{{#if arcana}}checked{{/if}}></p>
+                  <p>History <input type="checkbox" id="history"{{#if history}}checked{{/if}}></p>
+                  <p>Investigaiton <input type="checkbox" id="investigation"{{#if investigation}}checked{{/if}}></p>
+                  <p>Nature <input type="checkbox" id="nature"{{#if nature}}checked{{/if}}></p>
+                  <p>Religion <input type="checkbox" id="religion"{{#if religion}}checked{{/if}}></p>
+              </div>
+          </div>
+          <div class="edit-attribute">
+              <div class="edit-value"> 
+                  <p class="desc-name">Wisdom</p> 
+                  <input type="text" class="input" id="wisdom-text" value="{{wisdom}}">
+              </div>
+              <div class="edit-proficiency">
+                  <p>Saving Throw <input type="checkbox" id="wisdom-save"{{#if wisdomsave}}checked{{/if}}></p>
+                  <p>Animal Handling <input type="checkbox" id="animal-handling"{{#if animal}}checked{{/if}}></p>
+                  <p>Insight <input type="checkbox" id="insight"{{#if insight}}checked{{/if}}></p>
+                  <p>Medicine <input type="checkbox" id="medicine"{{#if medicine}}checked{{/if}}></p>
+                  <p>Perception <input type="checkbox" id="perception"{{#if perception}}checked{{/if}}></p>
+                  <p>Survival <input type="checkbox" id="survival"{{#if survival}}checked{{/if}}></p>
+              </div>
+          </div>
+          <div class="edit-attribute">
+              <div class="edit-value"> 
+                  <p class="desc-name">Charisma</p> 
+                  <input type="text" class="input" id="charisma-text" value="{{charisma}}">
+              </div>
+              <div class="edit-proficiency">
+                  <p>Saving Throw <input type="checkbox" id="charisma-save"{{#if charismasave}}checked{{/if}}></p>
+                  <p>Deception <input type="checkbox" id="deception"{{#if deception}}checked{{/if}}></p>
+                  <p>Intimidation <input type="checkbox" id="intimidation"{{#if intimidation}}checked{{/if}}></p>
+                  <p>Performance <input type="checkbox" id="performance"{{#if performance}}checked{{/if}}></p>
+                  <p>Persuasion <input type="checkbox" id="persuasion"{{#if pursuasion}}checked{{/if}}></p>
+              </div>
+          </div>
+   </div>
+   <div class="text-column">
+       <div class="more-attributes"> 
+           <div class="edit-value2">
+               <p class="desc-name">AC</p>
+               <input type="text" class="input" id="ac-text" value="{{ac}}">
+           </div>
+           <div class="edit-value2">
+               <p class="desc-name">Initiative</p>
+               <input type="text" class="input" id="initiative-text" value="{{initiative}}">
+           </div>
+           <div class="edit-value2">
+               <p class="desc-name">HP</p>
+               <input type="text" class="input" id="hp-text" value="{{hp}}">
+           </div>
+           <div class="edit-value2">
+               <p class="desc-name">Passive Perception</p>
+               <input type="text" class="input" id="pp-text" value="{{pp}}">
+           </div>
+           <div class="edit-value2">
+               <p class="desc-name" id="speed-name">Speed</p>
+               <input type="text" class="input" id="speed-text" value={{speed}}>
+           </div>
+           <div class="edit-value2">
+               <p class="desc-name">Proficiency Bonus</p>
+               <input type="text" class="input" id="pbonus-text" value="{{pbonus}}">
+           </div>
+       </div>    
+       <div class="text-field">
+           <p class="desc-name">Equipment</p>
+           <textarea id="equipment-text" id="equipment-text" value="{{equipment}}"></textarea>
+       </div>
+   </div>
+   <div class="text-column"> 
+       <div class="text-field">
+           <p class="desc-name">Proficiencies & Languages</p>
+           <textarea class="right-box" id="proficiencies-text" value="{{proficiencies}}"></textarea>  
+       </div>
+       <div class="text-field">
+           <p class="desc-name">Features & Traits</p>
+           <textarea class="right-box" id="feats-text" value="{{feats}}"></textarea> 
+       </div>
+   </div>
+</div>

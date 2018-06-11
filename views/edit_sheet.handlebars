@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/main_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" defer></script>
+        <script src="/js/AddCharacter.js"></script>
+    </head>
+    <body> 
+        <div class="title-bar"> 
+          <img src="https://cdn.discordapp.com/attachments/371079677009199126/455635542109847552/dungeons_and_dragons_40_ampersand_flat1.png" class="dnd-img"> 
+          <p id="title">Tom Croll's DND Emporium</p>
+          <div class="home-container">
+              <a href="/list" id="home-button">Home</a> 
+          </div>
+          <p id="comedy-gold">Every Character Needs a Home</p>    
+		    </div>           
+        </div>
+        <div class="edit-container">
+            {{#each characters}}
+                {{> form}}
+            {{/each}}
+        </div>
+    </body>
+</html>
