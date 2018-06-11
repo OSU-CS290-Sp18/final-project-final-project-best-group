@@ -33,18 +33,15 @@ app.get('/chars/:charName/:charRace', function (req, res, next) {
 });
 
 app.post('/name/:charName/:charRace/submit', function (req, res, next) {
+    console.log(req.body);
     var chars = db.collection('chars');
-    chars.updateOne(
-        { name: req.params.charName },
-        { race: req.params.charRace },
-        function (err, result) {
-            if (err) {
-                res.status(500).send("Error inserting char in DB");
-            } else {
-                res.status(200).redirect(`/chars/${req.params.charName}/${req.params.charRace}`);
-            }
-        } 
-    );
+    chars.insertOne(req.body, function (err, result) {
+        if (err) {
+            res.status(500).send("Error inserting char in DB");
+        } else {
+            res.status(200).redirect(`/chars/${req.params.charName}/${req.params.charRace}`);
+        }
+    });
 });
 
 app.get('*', function (req, res) {
