@@ -203,6 +203,9 @@ div {
 	width: 33%;
 	border: none;
 }
+.speed-name {
+	padding-bottom: 5px;
+}
 
 .text-field {
 	display: flex;
