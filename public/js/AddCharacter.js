@@ -91,7 +91,7 @@ function fillData(){
     document.getElementById('level-text').innerText = oldstats.level;
     document.getElementById('background-text').innerText = oldstats.background;
     document.getElementById('race-text').innerText = oldstats.race;
-    ocument.getElementById('alignment-text').innerText = oldstats.alignment;
+    document.getElementById('alignment-text').innerText = oldstats.alignment;
     document.getElementById('exp-text').innerText = oldstats.exp;
 
     document.getElementById('ac-text').innerText = oldstats.ac;
