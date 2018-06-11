@@ -202,6 +202,9 @@ function checkData(){
         alert("Character sheet must have name and race");
         n = false;
     }
+    
+    if(n)
+        sendData();
 }
 
 function sendData(){
