@@ -81,6 +81,78 @@ var stats = {
     pursuasion: document.getElementById('pursuasion').checked;
 
 }
+
+function fillData(){
+    document.getElementById('name-text').innerText = oldstats.name;
+    document.getElementById('class-text').innerText = oldstats.class;
+    document.getElementById('level-text').innerText = oldstats.level;
+    document.getElementById('background-text').innerText = oldstats.background;
+    document.getElementById('race-text').innerText = oldstats.race;
+    ocument.getElementById('alignment-text').innerText = oldstats.alignment;
+    document.getElementById('exp-text').innerText = oldstats.exp;
+
+    document.getElementById('ac-text').innerText = oldstats.ac;
+    document.getElementById('initiative-text').innerText = oldstats.initiative;
+    document.getElementById('hp-text').innerText = oldstats.hp;
+    document.getElementById('speed-text').innerText = oldstats.speed;
+
+    document.getElementById('pbonus-text').innerText = oldstats.pbonus;
+    document.getElementById('pp-text').innerText = oldstats.pp;
+
+    document.getElementById('equipment-text').innerText = oldstats.equipment;
+    document.getElementById('proficiencies-text').innerText = oldstats.proficiencies;
+    document.getElementById('feats-text').innerText = oldstats.feats;
+
+    document.getElementById('strength-text').innerText = oldstats.strength;
+    document.getElementById('strength-text').innerText = oldstats.strengthmod;
+
+    document.getElementById('dexterity-text').innerText = oldstats.dexterity;
+    document.getElementById('dexterity-text').innerText = oldstats.dexmod;
+
+    document.getElementById('constitution-text').innerText = oldstats.constitution;
+    document.getElementById('strength-text').innerText = oldstats.conmod
+
+    document.getElementById('intelligence-text').innerText = oldstats.intelligence;
+    document.getElementById('strength-text').innerText = oldstats.intmod;
+
+    document.getElementById('wisdom-text').innerText = oldstats.wisdom;
+    document.getElementById('strength-text').innerText = oldstats.wisdommod;
+
+    document.getElementById('charisma-text').innerText = oldstats.charisma;
+    document.getElementById('strength-text').innerTex = oldstats.charismamod;
+
+    document.getElementById('strength-save').checked = oldstats.strengthsave;
+    document.getElementById('athletics').checked = oldstats.athletics;
+
+    document.getElementById('dexterity-save').checked = oldstats.dexsave;
+    document.getElementById('acrobatics').checked = oldstats.acrobatics;
+    document.getElementById('sleight-of-hand').checked = oldstats.sleight;
+    document.getElementById('stealth').checked = oldstats.stealth;
+
+    document.getElementById('constitution-save').checked = oldstats.consave;
+
+    document.getElementById('intelligence-save').checked = oldstats.intsave;
+    document.getElementById('arcana').checked = oldstats.arcana;
+    document.getElementById('history').checked = oldstats.history;
+    document.getElementById('investigation').checked = oldstats.investigation;
+    document.getElementById('nature').checked = oldstats.nature;
+    document.getElementById('religion').checked = oldstats.religion;
+
+    document.getElementById('wisdom-save').checked = oldstats.wisdomsave;
+    document.getElementById('animal-handling').checked = oldstats.animal;
+    document.getElementById('insight').checked = oldstats.insight;
+    document.getElementById('medicine').checked = oldstats.medicine;
+    document.getElementById('perception').checked = oldstats.perception;
+    document.getElementById('survival').checked = oldstats.survival;
+
+    document.getElementById('charisma-save').checked = oldstats.charismasave;
+    document.getElementById('deception').checked = oldstats.deception;
+    document.getElementById('intimidation').checked = oldstats.intimidation;
+    document.getElementById('performance').checked = oldstats.performance;
+    document.getElementById('pursuasion').checked = oldstats.pursuasion;
+
+}
+
 var requestBody = JSON.strigify(stats);
 
 function sendData(){
