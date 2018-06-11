@@ -2,7 +2,10 @@
 var request = new XMLHttpsRequest();
 request.setRequestHeader('Content-Type', 'application/json');
 
-var requestURL = '/name/' + document.getElementById('name-text').innerText + '/submit'
+var requestURL = '/name/' + document.getElementById('name-text').innerText
+                    + '/' + document.getElementById('race-text').innerText
+                    + '/submit'
+
 request.open('POST', requestURL);
 
 request.addEventListener('load', function(event) {
