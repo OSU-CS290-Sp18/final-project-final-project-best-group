@@ -7,7 +7,9 @@ a {
   color: black;
   padding: 5px;
   display: inline-block;
-  background-color: grey; 
+  background-color: grey;
+  border: 2px outset Beige;
+
 }
 body {
 	font-family: 'Roboto', sans-serif;
@@ -38,48 +40,49 @@ div {
 	flex-direction: row; 
 	justify-content: center;
 	background-color: #FF6347;
-	font-size: 30px;
-	height: 65px;
-	border: none;
+	font-size: 25px;
+	height: 80px;
+	border: 1px ridge darkgrey;
+	border-width: 0px 0px 1px 0px;
 	margin-bottom: 10px;
 }
 #home-button {
-	padding-top: 12px;
+	text-decoration: underline;
+	margin-left: 60px;
+	margin-top: 21px;
+	margin-bottom: 5px;
+	padding-top: 10px;
 	background-color: white; 
-	border: 2px outset #FF6347;
+	border: 1px outset black;
+	border-radius: 10px;
 	padding-left: 5px;
 }
 .dnd-img {
 	flex-basis: 3%; 
-	width: 65px;
-	height: 65px;
+	width: 85px;
+	height: 85px;
 	margin-left: none;
 }
 #title {
-	border: 1px ridge black;
-	border-color: black white;
-	border-width: 0px 2px 1px 1px;
-	padding-top: none;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	padding-top: 15px;
 	flex-basis: 19.25%; 
 	margin: none;
-	font-size: 25px;
+	border: 1px ridge black;
+	border-width: 0px 1px 0px 0px;
 }
 .home-container {
+	border: none;
 	display: flex;
-	justify-content: center;
-	border: 1px ridge black;
-	border-color: black white;
-	border-width: 0px 2px 1px 2px;
 	flex-basis: 54.5%;
 }
 #comedy-gold {
-	padding-top: 52px;
+	padding-top: 55px;
+	padding-left: 7px;
 	text-align: right;
 	flex-basis: 23%;
-	font-size: 8px;
-	border: 1px ridge black;
-	border-color: black white;
-	border-width: 0px 0px 1px 2px;
+	font-size: 15px;
 }
 
 .new-char {
