@@ -107,22 +107,16 @@ function fillData(){
     document.getElementById('feats-text').innerText = oldstats.feats;
 
     document.getElementById('strength-text').innerText = oldstats.strength;
-    document.getElementById('strength-text').innerText = oldstats.strengthmod;
 
     document.getElementById('dexterity-text').innerText = oldstats.dexterity;
-    document.getElementById('dexterity-text').innerText = oldstats.dexmod;
 
     document.getElementById('constitution-text').innerText = oldstats.constitution;
-    document.getElementById('strength-text').innerText = oldstats.conmod
 
     document.getElementById('intelligence-text').innerText = oldstats.intelligence;
-    document.getElementById('strength-text').innerText = oldstats.intmod;
 
     document.getElementById('wisdom-text').innerText = oldstats.wisdom;
-    document.getElementById('strength-text').innerText = oldstats.wisdommod;
 
     document.getElementById('charisma-text').innerText = oldstats.charisma;
-    document.getElementById('strength-text').innerTex = oldstats.charismamod;
 
     document.getElementById('strength-save').checked = oldstats.strengthsave;
     document.getElementById('athletics').checked = oldstats.athletics;
@@ -158,8 +152,60 @@ function fillData(){
 
 var requestBody = JSON.strigify(stats);
 
+function checkData(){
+    var n = true;
+
+    if( parseInt(document.getElementById('strength-text').innerText) < 2 ||
+        parseInt(document.getElementById('strength-text').innerText) > 20 ){
+            document.getElementById('strength-text').backgroundcolor = "red";
+            //document.getElementById('strength-text').innerText = "";
+            n = false;
+        }
+
+    if( parseInt(document.getElementById('dexterity-text').innerText) < 2 ||
+        parseInt(document.getElementById('dexterity-text').innerText) > 20 ){
+            document.getElementById('dexterity-text').backgroundcolor = "red";
+            n = false;
+        }
+
+    if( parseInt(document.getElementById('constitution-text').innerText) < 2 ||
+        parseInt(document.getElementById('constitution-text').innerText) > 20 ){
+            document.getElementById('constitution-text').backgroundcolor = "red";
+            n = false;
+        }
+
+    if( parseInt(document.getElementById('intelligence-text').innerText) < 2 ||
+        parseInt(document.getElementById('intelligence-text').innerText) > 20 ){
+            document.getElementById('intelligence-text').backgroundcolor = "red";
+            n = false;
+        }
+
+    if( parseInt(document.getElementById('wisdom-text').innerText) < 2 ||
+        parseInt(document.getElementById('wisdom-text').innerText) > 20 ){
+            document.getElementById('wisdom-text').backgroundcolor = "red";
+            n = false;
+        }
+
+    if( parseInt(document.getElementById('charisma-text').innerText) < 2 ||
+        parseInt(document.getElementById('charisma-text').innerText) > 20 ){
+            document.getElementById('charisma-text').backgroundcolor = "red";
+            n = false;
+        }
+
+    if( parseInt(document.getElementById('ac-text').innerText) > 30 ||
+        parseInt(document.getElementById('ac-text').innerText) < 1 ){
+        document.getElementById('ac-text').backgroundcolor = "red";
+        n = false;
+    }
+
+    if( document.getElementById('name-text').innerText == "" || document.getElementById('race-text').innerText == "") {
+        alert("Character sheet must have name and race");
+        n = false;
+    }
+}
+
 function sendData(){
     request.send(requestBody);
 }
 
-document.getElementById('submit-input').onclick = sendData;
+document.getElementById('submit-input').onclick = checkData;
