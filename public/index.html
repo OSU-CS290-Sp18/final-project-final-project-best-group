@@ -1,26 +1,40 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <link rel="stylesheet" type="text/css" href="css/main_style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" defer></script>
     </head>
     <body>
         <div class="title-bar">
-          <img src="https://i1.wp.com/diceofdoom.com/blog/wp-content/uploads/2014/10/dungeons_and_dragons_40_ampersand_flat1.png" class="dnd-img">
-          <p id="title">Tom Croll's DND Emporium</p>
-          <div class="home-container">
-              <a href="list.html" id="home-button">Home</a>
+      		<img src="https://cdn.discordapp.com/attachments/371079677009199126/455635542109847552/dungeons_and_dragons_40_ampersand_flat1.png" class="dnd-img"> 
+			    <p id="title">Roll 19</p>
+			    <div class="home-container">
+				      <a href="/" id="home-button">Home</a> 
+			        <a href="list" id="char-list-button">Character List</a>
+              <a href="edit" id="char-edit-button">New Character</a>
           </div>
-          <p id="comedy-gold">Every Character Needs a Home</p>
-        </div>
+		      <p id="comedy-gold">Every Character Needs a Home</p>
+	      </div>
         <div class = "about">
             <p class = "about-head">
                 What Is This Webpage?
             </p>
             <p class = "about-body">
                 You can create and store character sheets on a database. These characters can be edited or viewed later from the list page.
+
             </p>
             <img src = "https://i.imgur.com/vJFlkCv.png" class = "dragon-image">
         </div>
+        <script>
+            window.onresize = hideText;
+            function hideText(){
+                var w = window.outerWidth;
+                if(parseInt(w) < 1000 ){
+                    document.getElementsByClassName('about-body')[0].classList.add('hidden');
+                }else{
+                    document.getElementsByClassName('about-body')[0].classList.remove('hidden');
+                }
+            }
+        </script>
     </body>
 </html>

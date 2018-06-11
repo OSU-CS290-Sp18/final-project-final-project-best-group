@@ -7,9 +7,11 @@ a {
   color: black;
   padding: 5px;
   display: inline-block;
-  background-color: grey;
+  background-color: lightgrey;
   border: 2px outset Beige;
-
+}
+a:active {
+	border-style: inset;
 }
 body {
 	font-family: 'Roboto', sans-serif;
@@ -46,31 +48,32 @@ div {
 	border-width: 0px 0px 1px 0px;
 	margin-bottom: 10px;
 }
-#home-button {
-	text-decoration: underline;
-	margin-left: 60px;
-	margin-top: 21px;
-	margin-bottom: 5px;
-	padding-top: 10px;
+#home-button, #char-edit-button, #char-list-button {
+	margin-left: 30px;
+	margin-top: 24px;
+	margin-bottom: 8px;
+	padding-top: 8px;
 	background-color: white; 
 	border: 1px outset black;
-	border-radius: 10px;
+	border-radius: 10px 10px 0px 0px;
 	padding-left: 5px;
 }
 .dnd-img {
 	flex-basis: 3%; 
 	width: 85px;
 	height: 85px;
-	margin-left: none;
+	margin-top: 7px;
 }
 #title {
 	margin-top: 15px;
-	margin-bottom: 5px;
-	padding-top: 15px;
+	padding-top: 9px;
+	padding-left: 29px;
+	margin-bottom: 8px;
 	flex-basis: 19.25%; 
-	margin: none;
+	font-size: 35;
 	border: 1px ridge black;
 	border-width: 0px 1px 0px 0px;
+	text-shadow: 1px 1px black;
 }
 .home-container {
 	border: none;
@@ -89,12 +92,13 @@ div {
 	width: 100%;
 	display: flex; 
 	justify-content: center; 
-	border-style: groove solid; 
+	border: none;
+	padding-top: 10px;
+	padding-bottom: 15px;
 }
 #newCharButton {
 	font-size: 30px;
-	border: none;
-	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+	border-width: 2px
 }
 .desc-container {
 	display: flex; 
@@ -105,22 +109,24 @@ div {
 	display: flex;
 	width: 100%;
 	flex-direction: row; 
-    justify-content: center;
 	font-size: 20px;
 }
 .header-name {
 	flex-basis: 32%;
+	flex-grow: 5;
 }
 	
 .header-lvl {
+	flex-grow: 1;
 	flex-basis: 8%; 
 }
-
 .header-class, .header-race {
+	flex-grow: 3;
 	flex-basis: 21%;
 }
 .header-edit {
-	flex-basis: 18%; 
+	flex-grow: 2;
+	flex-basis: 18%;
 	display: flex; 
 	align-items: center;
 	justify-content: center;
@@ -128,7 +134,10 @@ div {
 }
 
 
-
+.char-container {
+	width: 100%;
+	display flex;
+}
 .char-desc {
 	display: flex;
 	width: 100%; 
@@ -137,25 +146,37 @@ div {
 }
 
 .list-name {
+	flex-grow: 5;
 	flex-basis: 32%;	
+	margin: none;
 }
 .list-lvl  {
+	flex-grow: 1;
 	flex-basis: 8%;
+	margin: none;
 }
 .list-class, .list-race {
+	flex-grow: 3;
+	margin: none;
 	flex-basis: 21%;
+	margin
 }
 .list-edit, .list-view {
+  flex-grow: 1;
+  margin: none;	
   display: flex;
   justify-content: center; 
   flex-basis: 9%;
+}
+.list-button {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .edit-header {
 	width: 99.5%; 
 	display: flex; 
 	flex-direction: row;
 	flex-wrap: wrap; 
-	justify-content: center;
 }
 .edit-desc {
 	justify-content: center; 
@@ -167,9 +188,10 @@ div {
 }
 .desc-name {
 	text-align: center;
+	word-break: normal;
 }
 .button-container {
-	flex-basis: 33%;
+	flex-basis: 32.7%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -232,10 +254,10 @@ div {
 	width: 33%;
 	border: none;
 }
-.speed-name {
+#speed-name {
+	padding-top: 24px;
 	padding-bottom: 5px;
 }
-
 .text-field {
 	display: flex;
 	flex-direction: column;
@@ -247,12 +269,14 @@ div {
 	height: 511px;
 	width: 90%;
 	left: 5%;	
+	resize: none;
 }
 .right-box {
 	position: relative;
 	height: 303px;
 	width: 90%;
 	left: 5%;
+	resize: none;
 }
 #feats-text {
 	height: 304px;
@@ -472,4 +496,69 @@ div {
 }
 .char-speed {
     margin-right: 5px;
+}
+.page-not-found{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 60px;
+	border: none;
+}
+.meme{
+    display: flex;
+
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 60px;
+	border: none;
+}
+
+
+.suggestion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 30px;
+	border: none;
+}
+.dnd-img {
+	flex-basis: 3%;
+	width: 65px;
+	height: 65px;
+	margin-left: none;
+}
+.about-head {
+    word-break: normal;
+    position: absolute;
+    width: 35%;
+    left: 200px;
+    top: 250px;
+    font-size: 50px;
+    border: none;
+}
+
+.about-body {
+    word-break: normal;
+    width: 35%;
+    position: relative;
+    left: 210px;
+    top: 300px;
+    font-size: 25px;
+    border: none;
+}
+
+.dragon-image{
+        position: absolute;
+        right: 100px;
+        top: 150px;
+        font-size: 30px;
+        border: none;
+        z-index: -1;
+}
+
+.hidden{
+    display: none;
+}
+.about {
+  border: none;
 }
