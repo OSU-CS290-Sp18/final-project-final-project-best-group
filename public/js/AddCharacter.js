@@ -1,15 +1,10 @@
-
-
 var request = new XMLHttpRequest();
-
-
 
 request.addEventListener('load', function(event) {
     if (event.target.status == 200){
         window.location.replace(`/chars/${document.getElementById('name-text').value}/${document.getElementById('race-text').value}`);
     }
 });
-
 
 function fillData(){
     document.getElementById('name-text').innerText = oldstats.name;
@@ -76,11 +71,8 @@ function fillData(){
 
 }
 
-
 function checkData() {
-    //console.log(document.getElementById('strength-text').value + 'st');
     var n = true;
-
 
     if( isNaN(parseInt(document.getElementById('strength-text').value)) ||
         parseInt(document.getElementById('strength-text').value) < 3 ||
@@ -134,7 +126,7 @@ function checkData() {
         parseInt(document.getElementById('ac-text').value) > 30 ||
         parseInt(document.getElementById('ac-text').value) < 1 ){
             document.getElementById('ac-text').value = "";
-            document.getElementById('ac-text').placeholder = "3-20";
+            document.getElementById('ac-text').placeholder = "1-30";
             n = false;
     }
 
