@@ -50,7 +50,35 @@ var stats = {
     charisma: document.getElementById('charisma-text').innerText;
     charismamod: (parseInt(document.getElementById('strength-text').innerText)-10)/2;
 
+    strengthsave: document.getElementById('strength-save').checked;
+    athletics: document.getElementById('athletics').checked;
 
+    dexsave: document.getElementById('dexterity-save').checked;
+    acrobatics: document.getElementById('acrobatics').checked;
+    sleight: document.getElementById('sleight-of-hand').checked;
+    stealth: document.getElementById('stealth').checked;
+
+    consave: document.getElementById('constitution-save').checked;
+
+    intsave: document.getElementById('intelligence-save').checked;
+    arcana: document.getElementById('arcana').checked;
+    history: document.getElementById('history').checked;
+    investigation: document.getElementById('investigation').checked;
+    nature: document.getElementById('nature').checked;
+    religion: document.getElementById('religion').checked;
+
+    wisdomsave: document.getElementById('wisdom-save').checked;
+    animal: document.getElementById('animal-handling').checked;
+    insight: document.getElementById('insight').checked;
+    medicine: document.getElementById('medicine').checked;
+    perception: document.getElementById('perception').checked;
+    survival: document.getElementById('survival').checked;
+
+    charismasave: document.getElementById('charisma-save').checked;
+    deception: document.getElementById('deception').checked;
+    intimidation: document.getElementById('intimidation').checked;
+    performance: document.getElementById('performance').checked;
+    pursuasion: document.getElementById('pursuasion').checked;
 
 }
 var requestBody = JSON.strigify(stats);
