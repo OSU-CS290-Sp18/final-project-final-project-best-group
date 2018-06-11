@@ -79,93 +79,95 @@ function fillData(){
 function checkData() {
     var n = true;
 
-    if( parseInt(document.getElementById('strength-text').innerText) < 2 ||
-        parseInt(document.getElementById('strength-text').innerText) > 20 ){
+    if( parseInt(document.getElementById('strength-text').value) < 2 ||
+        parseInt(document.getElementById('strength-text').value) > 20 ){
             document.getElementById('strength-text').backgroundcolor = "red";
-            //document.getElementById('strength-text').innerText = "";
+            //document.getElementById('strength-text').value = "";
             n = false;
         }
 
-    if( parseInt(document.getElementById('dexterity-text').innerText) < 2 ||
-        parseInt(document.getElementById('dexterity-text').innerText) > 20 ){
+    if( parseInt(document.getElementById('dexterity-text').value) < 2 ||
+        parseInt(document.getElementById('dexterity-text').value) > 20 ){
             document.getElementById('dexterity-text').backgroundcolor = "red";
             n = false;
         }
 
-    if( parseInt(document.getElementById('constitution-text').innerText) < 2 ||
-        parseInt(document.getElementById('constitution-text').innerText) > 20 ){
+    if( parseInt(document.getElementById('constitution-text').value) < 2 ||
+        parseInt(document.getElementById('constitution-text').value) > 20 ){
             document.getElementById('constitution-text').backgroundcolor = "red";
             n = false;
         }
 
-    if( parseInt(document.getElementById('intelligence-text').innerText) < 2 ||
-        parseInt(document.getElementById('intelligence-text').innerText) > 20 ){
+    if( parseInt(document.getElementById('intelligence-text').value) < 2 ||
+        parseInt(document.getElementById('intelligence-text').value) > 20 ){
             document.getElementById('intelligence-text').backgroundcolor = "red";
             n = false;
         }
 
-    if( parseInt(document.getElementById('wisdom-text').innerText) < 2 ||
-        parseInt(document.getElementById('wisdom-text').innerText) > 20 ){
+    if( parseInt(document.getElementById('wisdom-text').value) < 2 ||
+        parseInt(document.getElementById('wisdom-text').value) > 20 ){
             document.getElementById('wisdom-text').backgroundcolor = "red";
             n = false;
         }
 
-    if( parseInt(document.getElementById('charisma-text').innerText) < 2 ||
-        parseInt(document.getElementById('charisma-text').innerText) > 20 ){
+    if( parseInt(document.getElementById('charisma-text').value) < 2 ||
+        parseInt(document.getElementById('charisma-text').value) > 20 ){
             document.getElementById('charisma-text').backgroundcolor = "red";
             n = false;
         }
 
-    if( parseInt(document.getElementById('ac-text').innerText) > 30 ||
-        parseInt(document.getElementById('ac-text').innerText) < 1 ){
+    if( parseInt(document.getElementById('ac-text').value) > 30 ||
+        parseInt(document.getElementById('ac-text').value) < 1 ){
         document.getElementById('ac-text').backgroundcolor = "red";
         n = false;
     }
 
-    if( document.getElementById('name-text').innerText == "" || document.getElementById('race-text').innerText == "") {
+    if( document.getElementById('name-text').value == "" || document.getElementById('race-text').value == "") {
         alert("Character sheet must have name and race");
+        console.log(document.getElementById('name-text').value);
+        console.log(document.getElementById('race-text').value);
         n = false;
     }
 
     if(n)
         var stats = {
-            name: document.getElementById('name-text').innerText,
-            class: document.getElementById('class-text').innerText,
-            level: document.getElementById('level-text').innerText,
-            background: document.getElementById('background-text').innerText,
-            race: document.getElementById('race-text').innerText,
-            alignment: document.getElementById('alignment-text').innerText,
-            exp: document.getElementById('exp-text').innerText,
+            name: document.getElementById('name-text').value,
+            class: document.getElementById('class-text').value,
+            level: document.getElementById('level-text').value,
+            background: document.getElementById('background-text').value,
+            race: document.getElementById('race-text').value,
+            alignment: document.getElementById('alignment-text').value,
+            exp: document.getElementById('experience-text').value,
 
-            ac: document.getElementById('ac-text').innerText,
-            initiative: document.getElementById('initiative-text').innerText,
-            hp: document.getElementById('hp-text').innerText,
-            speed: document.getElementById('speed-text').innerText,
+            ac: document.getElementById('ac-text').value,
+            initiative: document.getElementById('initiative-text').value,
+            hp: document.getElementById('hp-text').value,
+            speed: document.getElementById('speed-text').value,
 
-            pbonus: document.getElementById('pbonus-text').innerText,
-            pp: document.getElementById('pp-text').innerText,
+            pbonus: document.getElementById('pbonus-text').value,
+            pp: document.getElementById('pp-text').value,
 
-            equipment: document.getElementById('equipment-text').innerText,
-            proficiencies: document.getElementById('proficiencies-text').innerText,
-            feats: document.getElementById('feats-text').innerText,
+            equipment: document.getElementById('equipment-text').value,
+            proficiencies: document.getElementById('proficiencies-text').value,
+            feats: document.getElementById('feats-text').value,
 
-            strength: document.getElementById('strength-text').innerText,
-            strengthmod: (parseInt(document.getElementById('strength-text').innerText)-10)/2,
+            strength: document.getElementById('strength-text').value,
+            strengthmod: (parseInt(document.getElementById('strength-text').value)-10)/2,
 
-            dexterity: document.getElementById('dexterity-text').innerText,
-            dexmod: (parseInt(document.getElementById('dexterity-text').innerText)-10)/2,
+            dexterity: document.getElementById('dexterity-text').value,
+            dexmod: (parseInt(document.getElementById('dexterity-text').value)-10)/2,
 
-            constitution: document.getElementById('constitution-text').innerText,
-            conmod: (parseInt(document.getElementById('strength-text').innerText)-10)/2,
+            constitution: document.getElementById('constitution-text').value,
+            conmod: (parseInt(document.getElementById('strength-text').value)-10)/2,
 
-            intelligence: document.getElementById('intelligence-text').innerText,
-            intmod: (parseInt(document.getElementById('strength-text').innerText)-10)/2,
+            intelligence: document.getElementById('intelligence-text').value,
+            intmod: (parseInt(document.getElementById('strength-text').value)-10)/2,
 
-            wisdom: document.getElementById('wisdom-text').innerText,
-            wisdommod: (parseInt(document.getElementById('strength-text').innerText)-10)/2,
+            wisdom: document.getElementById('wisdom-text').value,
+            wisdommod: (parseInt(document.getElementById('strength-text').value)-10)/2,
 
-            charisma: document.getElementById('charisma-text').innerText,
-            charismamod: (parseInt(document.getElementById('strength-text').innerText)-10)/2,
+            charisma: document.getElementById('charisma-text').value,
+            charismamod: (parseInt(document.getElementById('strength-text').value)-10)/2,
 
             strengthsave: document.getElementById('strength-save').checked,
             athletics: document.getElementById('athletics').checked,
@@ -195,11 +197,11 @@ function checkData() {
             deception: document.getElementById('deception').checked,
             intimidation: document.getElementById('intimidation').checked,
             performance: document.getElementById('performance').checked,
-            pursuasion: document.getElementById('pursuasion').checked
+            pursuasion: document.getElementById('persuasion').checked
 
         }
-        var requestURL = '/name/' + document.getElementById('name-text').innerText
-                    + '/' + document.getElementById('race-text').innerText
+        var requestURL = '/name/' + document.getElementById('name-text').value
+                    + '/' + document.getElementById('race-text').value
                     + '/submit'
         request.open('POST', requestURL);
         request.setRequestHeader('Content-Type', 'application/json');
