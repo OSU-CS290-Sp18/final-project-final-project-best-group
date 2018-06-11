@@ -90,7 +90,7 @@ app.post('/name/:charName/:charRace/submit', function (req, res, next) {
 });
 
 app.get('*', function (req, res) {
-    res.status(404).send("Doesn't exist");
+    res.status(404).sendFile("public/404.html", { root: __dirname });
 });
 
 MongoClient.connect(mongoURL, function (err, client) {
