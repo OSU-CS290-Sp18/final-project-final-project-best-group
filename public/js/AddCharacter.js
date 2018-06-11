@@ -158,22 +158,22 @@ function checkData() {
             feats: document.getElementById('feats-text').value,
 
             strength: document.getElementById('strength-text').value,
-            strengthmod: (parseInt(document.getElementById('strength-text').value)-10)/2,
+            strengthmod: Math.floor((parseInt(document.getElementById('strength-text').value)-10)/2),
 
             dexterity: document.getElementById('dexterity-text').value,
-            dexmod: (parseInt(document.getElementById('dexterity-text').value)-10)/2,
+            dexmod: Math.floor((parseInt(document.getElementById('dexterity-text').value)-10)/2),
 
             constitution: document.getElementById('constitution-text').value,
-            conmod: (parseInt(document.getElementById('strength-text').value)-10)/2,
+            conmod: Math.floor((parseInt(document.getElementById('strength-text').value)-10)/2),
 
             intelligence: document.getElementById('intelligence-text').value,
-            intmod: (parseInt(document.getElementById('strength-text').value)-10)/2,
+            intmod: Math.floor((parseInt(document.getElementById('strength-text').value)-10)/2),
 
             wisdom: document.getElementById('wisdom-text').value,
-            wisdommod: (parseInt(document.getElementById('strength-text').value)-10)/2,
+            wisdommod: Math.floor((parseInt(document.getElementById('strength-text').value)-10)/2),
 
             charisma: document.getElementById('charisma-text').value,
-            charismamod: (parseInt(document.getElementById('strength-text').value)-10)/2,
+            charismamod: Math.floor((parseInt(document.getElementById('strength-text').value)-10)/2),
 
             strengthsave: document.getElementById('strength-save').checked,
             athletics: document.getElementById('athletics').checked,
