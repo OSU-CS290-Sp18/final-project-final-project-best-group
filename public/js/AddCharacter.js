@@ -1,4 +1,5 @@
 
+
 var request = new XMLHttpRequest();
 
 
@@ -77,55 +78,68 @@ function fillData(){
 
 
 function checkData() {
+    //console.log(document.getElementById('strength-text').value + 'st');
     var n = true;
 
-    if( parseInt(document.getElementById('strength-text').value) < 2 ||
+
+    if( isNaN(parseInt(document.getElementById('strength-text').value)) ||
+        parseInt(document.getElementById('strength-text').value) < 3 ||
         parseInt(document.getElementById('strength-text').value) > 20 ){
-            document.getElementById('strength-text').backgroundcolor = "red";
-            //document.getElementById('strength-text').value = "";
+            document.getElementById('strength-text').value = "";
+            document.getElementById('strength-text').placeholder = "3-20";
             n = false;
         }
 
-    if( parseInt(document.getElementById('dexterity-text').value) < 2 ||
+    if( isNaN(parseInt(document.getElementById('dexterity-text').value)) ||
+        parseInt(document.getElementById('dexterity-text').value) < 3 ||
         parseInt(document.getElementById('dexterity-text').value) > 20 ){
-            document.getElementById('dexterity-text').backgroundcolor = "red";
+            document.getElementById('dexterity-text').value = "";
+            document.getElementById('dexterity-text').placeholder = "3-20";
             n = false;
         }
 
-    if( parseInt(document.getElementById('constitution-text').value) < 2 ||
+    if( isNaN(parseInt(document.getElementById('constitution-text').value)) ||
+        parseInt(document.getElementById('constitution-text').value) < 3 ||
         parseInt(document.getElementById('constitution-text').value) > 20 ){
-            document.getElementById('constitution-text').backgroundcolor = "red";
+            document.getElementById('constitution-text').value = "";
+            document.getElementById('constitution-text').placeholder = "3-20";
             n = false;
         }
 
-    if( parseInt(document.getElementById('intelligence-text').value) < 2 ||
+    if( isNaN(parseInt(document.getElementById('intelligence-text').value)) ||
+        parseInt(document.getElementById('intelligence-text').value) < 3 ||
         parseInt(document.getElementById('intelligence-text').value) > 20 ){
-            document.getElementById('intelligence-text').backgroundcolor = "red";
+            document.getElementById('intelligence-text').value = "";
+            document.getElementById('intelligence-text').placeholder = "3-20";
             n = false;
         }
 
-    if( parseInt(document.getElementById('wisdom-text').value) < 2 ||
+    if( isNaN(parseInt(document.getElementById('wisdom-text').value)) ||
+        parseInt(document.getElementById('wisdom-text').value) < 3 ||
         parseInt(document.getElementById('wisdom-text').value) > 20 ){
-            document.getElementById('wisdom-text').backgroundcolor = "red";
+            document.getElementById('wisdom-text').value = "";
+            document.getElementById('wisdom-text').placeholder = "3-20";
             n = false;
         }
 
-    if( parseInt(document.getElementById('charisma-text').value) < 2 ||
+    if( isNaN(parseInt(document.getElementById('charisma-text').value)) ||
+        parseInt(document.getElementById('charisma-text').value) < 3 ||
         parseInt(document.getElementById('charisma-text').value) > 20 ){
-            document.getElementById('charisma-text').backgroundcolor = "red";
+            document.getElementById('charisma-text').value = "";
+            document.getElementById('charisma-text').placeholder = "3-20";
             n = false;
         }
 
-    if( parseInt(document.getElementById('ac-text').value) > 30 ||
+    if( isNaN(parseInt(document.getElementById('ac-text').value)) ||
+        parseInt(document.getElementById('ac-text').value) > 30 ||
         parseInt(document.getElementById('ac-text').value) < 1 ){
-        document.getElementById('ac-text').backgroundcolor = "red";
-        n = false;
+            document.getElementById('ac-text').value = "";
+            document.getElementById('ac-text').placeholder = "3-20";
+            n = false;
     }
 
     if( document.getElementById('name-text').value == "" || document.getElementById('race-text').value == "") {
         alert("Character sheet must have name and race");
-        console.log(document.getElementById('name-text').value);
-        console.log(document.getElementById('race-text').value);
         n = false;
     }
 
@@ -200,12 +214,14 @@ function checkData() {
             pursuasion: document.getElementById('persuasion').checked
 
         }
+        if(n){
         var requestURL = '/name/' + document.getElementById('name-text').value
                     + '/' + document.getElementById('race-text').value
                     + '/submit'
         request.open('POST', requestURL);
         request.setRequestHeader('Content-Type', 'application/json');
-        sendData(JSON.stringify(stats));
+        }
+//        sendData(JSON.stringify(stats));
 }
 
 function sendData(data){
