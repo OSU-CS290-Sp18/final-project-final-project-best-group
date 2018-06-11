@@ -39,11 +39,13 @@ div {
 	font-size: 30px;
 	height: 65px;
 	border: none;
+	margin-bottom: 10px;
 }
 #home-button {
 	padding-top: 12px;
 	background-color: white; 
 	border: 2px outset #FF6347;
+	padding-left: 5px;
 }
 .dnd-img {
 	flex-basis: 3%; 
@@ -53,26 +55,29 @@ div {
 }
 #title {
 	border: 1px ridge black;
-	border-color: black, white;
-	border-width: 0px 1px 1px 1px;
-	padding-top: 13px;
-	flex-basis: 32%; 
-	border-radius: 10px 0px 5px 10px;
+	border-color: black white;
+	border-width: 0px 2px 1px 1px;
+	padding-top: none;
+	flex-basis: 19.25%; 
 	margin: none;
+	font-size: 25px;
 }
 .home-container {
 	display: flex;
 	justify-content: center;
 	border: 1px ridge black;
-	border-width: 0px 0px 1px 0px;
-	border-radius: 10px;
-	flex-basis: 34%;
+	border-color: black white;
+	border-width: 0px 2px 1px 2px;
+	flex-basis: 54.5%;
 }
 #comedy-gold {
 	padding-top: 52px;
 	text-align: right;
-	flex-basis: 33%;
+	flex-basis: 23%;
 	font-size: 8px;
+	border: 1px ridge black;
+	border-color: black white;
+	border-width: 0px 0px 1px 2px;
 }
 
 .new-char {
@@ -257,7 +262,7 @@ div {
 }
 
 .char-sheet, .list-sheet, .edit-sheet {
-    width: 55%;
+    width: 54%;
     display: flex;
     border: none;
     flex-wrap: wrap;
