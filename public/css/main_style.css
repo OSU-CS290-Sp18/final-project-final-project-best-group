@@ -33,15 +33,46 @@ div {
 
 .title-bar {
 	display: flex;
+	flex-direction: row; 
 	justify-content: center;
 	background-color: #FF6347;
 	font-size: 30px;
+	height: 65px;
 	border: none;
-	height: 50px;
+}
+#home-button {
+	padding-top: 12px;
+	background-color: white; 
+	border: 2px outset #FF6347;
 }
 .dnd-img {
-	width: 50px;
-	height: 50px;
+	flex-basis: 3%; 
+	width: 65px;
+	height: 65px;
+	margin-left: none;
+}
+#title {
+	border: 1px ridge black;
+	border-color: black, white;
+	border-width: 0px 1px 1px 1px;
+	padding-top: 13px;
+	flex-basis: 32%; 
+	border-radius: 10px 0px 5px 10px;
+	margin: none;
+}
+.home-container {
+	display: flex;
+	justify-content: center;
+	border: 1px ridge black;
+	border-width: 0px 0px 1px 0px;
+	border-radius: 10px;
+	flex-basis: 34%;
+}
+#comedy-gold {
+	padding-top: 52px;
+	text-align: right;
+	flex-basis: 33%;
+	font-size: 8px;
 }
 
 .new-char {
@@ -110,7 +141,7 @@ div {
   flex-basis: 9%;
 }
 .edit-header {
-	width: 100%; 
+	width: 99.5%; 
 	display: flex; 
 	flex-direction: row;
 	flex-wrap: wrap; 
@@ -203,7 +234,7 @@ div {
 }
 #equipment-text { 
 	position: relative;
-	height: 530px;
+	height: 511px;
 	width: 90%;
 	left: 5%;	
 }
@@ -212,6 +243,9 @@ div {
 	height: 303px;
 	width: 90%;
 	left: 5%;
+}
+#feats-text {
+	height: 304px;
 }
 
 .sheet-container, .list-container, .edit-container {
