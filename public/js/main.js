@@ -1,32 +1,32 @@
-var descs = document.getElementsByClassName("desc-container");
+var container = document.getElementsByClassName("char-container");
+var chars = document.getElementsByClassName("char-desc");
 
-var alldescs = [];
-for(var k = 0; k < descs[0].length; k++){
-    alldescs.push(descs[0].getElementsByClassName('desc-container')[k].cloneNode([true]));
+var allchars = [];
+for(var k = 0; k < chars.length; k++){
+    allchars.push(chars[k].cloneNode([true]));
 }
 
 function search() {
-    var newdescs = [];
+    var newchars = [];
 
-    descs[0].innerHTML = "";
-    for(var l = 0; l < alldescs.length; l++){
-        descs[0].appendChild(alldescs[l]);
+    container[0].innerHTML = "";
+    for(var l = 0; l < allchars.length; l++){
+        container[0].appendChild(allchars[l]);
     }
 
     var n;
-    var desc = document.getElementsByClassName('desc-container');
-    for(var i = 0; i < descs[0].length; i++){
-        n = desc[i].getElementsByClassName('desc-text')[0].innerText.toLowerCase().includes(this.value.toLowerCase());
+    for(var i = 0; i < chars.length; i++){
+        n = chars[i].getElementsByClassName('list-name')[0].innerText.toLowerCase().includes(this.value.toLowerCase());
 
         if(n)
-            newdescs.push(twit[i].cloneNode([true]));
+            newchars.push(chars[i].cloneNode([true]));
     }
 
-    descs[0].innerHTML = "";
+    container[0].innerHTML = "";
 
-    for(var j = 0; j < newdescs.length; j++){
-        descs[0].appendChild(newdescs[j]);
+    for(var j = 0; j < newchars.length; j++){
+        container[0].appendChild(newchars[j]);
     }
 }
 
-document.getElementById('search-input').onkeyup = search;
+document.getElementById("search-input").onkeyup = search;
