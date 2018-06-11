@@ -3,10 +3,12 @@ var fs = require('fs');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var MongoClient = require('mongodb').MongoClient;
+var bodyParser = require('body-parser');
 
 var mongoDBDatabase;
 
 var app = express();
+app.use(bodyParser.json());
 var port = process.env.PORT || 3000;
 
 var mongoHost = process.env.MONGO_HOST;
@@ -30,16 +32,26 @@ app.get('/chars/:charName/:charRace', function (req, res, next) {
         name: req.params.charName,
         race: req.params.charRace 
     });
+    charCursor.next(function (err, charDoc) {
+        if (err)
+            res.status(500).send("Error retrieving single char");
+        else if (!charDoc)
+            next();
+        else { 
+            res.status(200).render('char_sheet', {
+                characters: [charDoc]
+            });
+        }
+    });
 });
 
 app.post('/name/:charName/:charRace/submit', function (req, res, next) {
-    console.log(req.body);
     var chars = db.collection('chars');
     chars.insertOne(req.body, function (err, result) {
         if (err) {
             res.status(500).send("Error inserting char in DB");
         } else {
-            res.status(200).redirect(`/chars/${req.params.charName}/${req.params.charRace}`);
+            res.status(302).redirect(`/chars/${req.params.charName}/${req.params.charRace}`);
         }
     });
 });

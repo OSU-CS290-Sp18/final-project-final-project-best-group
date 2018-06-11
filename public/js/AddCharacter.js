@@ -6,7 +6,7 @@ var request = new XMLHttpRequest();
 
 request.addEventListener('load', function(event) {
     if (event.target.status == 200){
-        alert("sucess");
+        window.location.replace(`/chars/${document.getElementById('name-text').value}/${document.getElementById('race-text').value}`);
     }
 });
 
@@ -220,8 +220,8 @@ function checkData() {
                     + '/submit'
         request.open('POST', requestURL);
         request.setRequestHeader('Content-Type', 'application/json');
+        sendData(JSON.stringify(stats));
         }
-//        sendData(JSON.stringify(stats));
 }
 
 function sendData(data){

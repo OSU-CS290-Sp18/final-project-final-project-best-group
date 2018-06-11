@@ -245,7 +245,7 @@ div {
     text-align: center;
     border-left: 2px solid black;
     border-top: 2px solid black;
-    min-width: 300;
+    min-width: 300px;
 }
 
 .char-name-name {
@@ -267,7 +267,7 @@ div {
     text-align: center;
     border-right: 2px solid black;
     border-top: 2px solid black;
-    min-width: 690;
+    min-width: 690px;
 }
 
 .char-class, .char-level, .char-background, .char-race, .char-alignment, .char-exp {
@@ -280,7 +280,7 @@ div {
 .char-content {
     display: flex;
     width: 100%;
-    min-width: 994;
+    min-width: 994px;
 }
 
 .char-stats-money, .char-hp-equipment, .char-traits-prof-feats {
@@ -386,7 +386,8 @@ div {
 
 .char-hp, .char-equipment, .char-traits, .char-feats {
     flex-grow: 1;
-    min-width: 300;
+    min-width: 300px;
+    max-width: 500px;
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
