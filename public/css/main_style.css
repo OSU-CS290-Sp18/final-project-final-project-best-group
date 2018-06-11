@@ -7,6 +7,7 @@ a {
   color: black;
   padding: 5px;
   display: inline-block;
+  background-color: grey; 
 }
 body {
 	font-family: 'Roboto', sans-serif;
@@ -43,6 +44,10 @@ div {
 	border: none;
 	height: 50px;
 }
+.dnd-img {
+	width: 50px;
+	height: 50px;
+}
 
 .new-char {
 	width: 100%;
@@ -53,7 +58,6 @@ div {
 #newCharButton {
 	font-size: 30px;
 	border: none;
-	background-color: grey;
 	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
 }
 .desc-container {
@@ -65,23 +69,28 @@ div {
 	display: flex;
 	width: 100%;
 	flex-direction: row; 
-  justify-content: center;
+    justify-content: center;
 	font-size: 20px;
 }
 .header-name {
-	flex-basis: 33%;
+	flex-basis: 32%;
 }
 	
 .header-lvl {
-	flex-basis: 7%; 
+	flex-basis: 8%; 
 }
 
 .header-class, .header-race {
-	flex-basis: 24%;
+	flex-basis: 21%;
 }
 .header-edit {
-	flex-basis: 12%; 
+	flex-basis: 18%; 
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+	padding-left: 1px;
 }
+
 
 
 .char-desc {
@@ -91,25 +100,130 @@ div {
 	font-size: 16px;
 }
 
-
 .list-name {
-	flex-basis: 33%;	
+	flex-basis: 32%;	
 }
 .list-lvl  {
-	flex-basis: 7%;
+	flex-basis: 8%;
 }
 .list-class, .list-race {
-	flex-basis: 24%;
+	flex-basis: 21%;
 }
-.list-edit {
+.list-edit, .list-view {
   display: flex;
   justify-content: center; 
-  flex-basis: 12%;
+  flex-basis: 9%;
 }
 
 
 
-.sheet-container {
+
+
+
+
+.edit-header {
+	width: 100%; 
+	display: flex; 
+	flex-direction: row;
+	flex-wrap: wrap; 
+	justify-content: center;
+}
+.edit-desc {
+	justify-content: center; 
+	display: flex;
+	flex-direction: column; 
+	padding-bottom: 10px;
+	border: none; 
+	flex-basis: 33%;
+}
+.desc-name {
+	text-align: center;
+}
+.button-container {
+	flex-basis: 33%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	border: 10px;
+	margin: 2px;
+}
+#delete-button {
+	background-color: #ff6347;
+}	
+
+.edit-content {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 33%;
+}
+.edit-attribute {
+	display: flex;
+	flex-direction: row; 
+}
+.edit-value {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 10px;
+	width: 50%;	
+}
+#persuasion {
+	margin-bottom: 6px;
+}
+
+
+.input {
+	position: relative;
+	left: 10%;
+	width: 80%;
+}
+.edit-proficiency {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	font-size: 12px;
+}
+
+
+.text-column {
+	display: flex; 
+	flex-direction: column;
+	flex-basis: 33%;
+}
+.more-attributes {
+	display: flex;
+	flex-direction: row; 
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.edit-value2 {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 10px;
+	width: 33%;
+	border: none;
+}
+
+.text-field {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 10px; 
+	width: 100%;
+}
+#equipment-text { 
+	position: relative;
+	height: 530px;
+	width: 90%;
+	left: 5%;	
+}
+.right-box {
+	position: relative;
+	height: 303px;
+	width: 90%;
+	left: 5%;
+}
+
+.sheet-container, .list-container, .edit-container {
     display: flex;
     justify-content: center;
     border: none;
@@ -117,8 +231,8 @@ div {
     margin-bottom: 30px;
 }
 
-.char-sheet {
-    width: 50%;
+.char-sheet, .list-sheet, .edit-sheet {
+    width: 55%;
     display: flex;
     border: none;
     flex-wrap: wrap;
@@ -127,7 +241,7 @@ div {
 .char-header {
    	background-color: white;
    	width: 100%;
-    display:flex;
+    display: flex;
     border: none;
 }
 
@@ -150,7 +264,7 @@ div {
     color: grey;
     margin: 0;
     font-weight: normal;
-    /* margin-top: auto; */
+    margin-top: auto; 
 }
 
 .char-info {
