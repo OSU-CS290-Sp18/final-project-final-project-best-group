@@ -16,7 +16,10 @@ function search() {
 
     var n;
     for(var i = 0; i < chars.length; i++){
-        n = chars[i].getElementsByClassName('list-name')[0].innerText.toLowerCase().includes(this.value.toLowerCase());
+        n = chars[i].getElementsByClassName('list-name')[0].innerText.toLowerCase().includes(this.value.toLowerCase())
+        || chars[i].getElementsByClassName('list-lvl')[0].innerText.toLowerCase().includes(this.value.toLowerCase())
+        || chars[i].getElementsByClassName('list-class')[0].innerText.toLowerCase() == this.value.toLowerCase()
+        || chars[i].getElementsByClassName('list-race')[0].innerText.toLowerCase() == this.value.toLowerCase();
 
         if(n)
             newchars.push(chars[i].cloneNode([true]));
