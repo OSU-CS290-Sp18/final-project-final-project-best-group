@@ -60,6 +60,8 @@ app.get('/chars/:charName/:charRace', function (req, res, next) {
             next();
         else { 
             res.status(200).render('char_sheet', {
+                name: charDoc.name,
+                race: charDoc.race,
                 characters: [charDoc]
             });
         }
